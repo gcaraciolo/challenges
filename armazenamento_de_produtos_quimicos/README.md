@@ -5,6 +5,8 @@ Os contêineres tem capacidade para armazenar até cinco produtos químicos, por
 
 O objetivo é escrever um software que encontre uma forma eficiente e segura de colocar os produtos químicos dentro dos contêineres.
 
+## Informações sobre os produtos químicos e contêineres
+
 Para cada produto químico será especificado sua característica e qual tipo de contêiner ele poderá ser armazenado.
 
 | Produto químico     | Característica | Especificação de armazenamento |
@@ -17,6 +19,8 @@ Para cada produto químico será especificado sua característica e qual tipo de
 Existem apenas três tipos de contêineres: **BLINDADO**, **VENTILADO** e **BÁSICO**. 
 
 A regra de restrição de armazenamento com outros produtos é composta do sufixo **NÃO_COM_** e a caraterística do produto a qual não pode ser armazenado em conjunto. Exemplo: **NÃO_COM_VOLÁTEL**.
+
+## Formato de entra e saída de dados do programa
 
 A entrada e saída de dados são representados da seguinte maneira:
 
