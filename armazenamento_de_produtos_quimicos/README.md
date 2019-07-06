@@ -27,7 +27,7 @@ Entrada:
     PQ:Cp+E
     PQ:Cp+E
     PQ:Cp+E
-    *****
+    -----
     Cc
     Cc
     Cc
@@ -48,7 +48,7 @@ Onde:
 **(:) dois pontos:**      
      Separação entre produtos químicos e suas características e especificações  
      Separação entre contêiner e os produtos químicos que armazena    
-******** (5 asteriscos):** Separação entre produtos químicos e contêineres 
+**----- (5 traços):** Separação entre produtos químicos e contêineres 
 
 Na entrada, cada linha representa um produto, antes dos asteriscos, e um contêiner, depois do asterisco. Na saída, cada linha representa um contêiner e os produtos que estão armazenados nele.
 
