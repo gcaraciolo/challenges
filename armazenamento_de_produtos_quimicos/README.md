@@ -20,6 +20,8 @@ Existem apenas três tipos de contêineres: **BLINDADO**, **VENTILADO** e **BÁS
 
 A regra de restrição de armazenamento com outros produtos é composta do sufixo **NÃO_COM_** e a caraterística do produto a qual não pode ser armazenado em conjunto. Exemplo: **NÃO_COM_VOLÁTEL**.
 
+Produtos que tiverem a especificação **QUALQUER_UM** podem ser armazenados em quaisquer contêineres.
+
 ## Entra e saída de dados do programa
 
 O caminho do arquivo contendo os dados de entrada será passado para o programa atráves da entrada padrão. O resultado deverá ser escrito na saída padrão.
