@@ -20,7 +20,9 @@ Existem apenas três tipos de contêineres: **BLINDADO**, **VENTILADO** e **BÁS
 
 A regra de restrição de armazenamento com outros produtos é composta do sufixo **NÃO_COM_** e a caraterística do produto a qual não pode ser armazenado em conjunto. Exemplo: **NÃO_COM_VOLÁTEL**.
 
-## Formato de entra e saída de dados do programa
+## Entra e saída de dados do programa
+
+Um arquivo será passado para o programa, atráves da entrada padrão, contendo os dados de entrada. A resultado deverá ser escrito na saída padrão.
 
 A entrada e saída de dados são representados da seguinte maneira:
 
@@ -36,6 +38,15 @@ Entrada:
     Cc
     Cc
 
+Onde:
+
+**PQ:** Produto químico  
+**Cp:** Característica do produto químico    
+**E:** Especificação de armazenamento   
+**Cc:** Característica dos contêineres disponíveis     
+**(:) dois pontos:** Separação entre produtos químicos e suas características e especificações  
+**----- (5 traços):** Separação entre produtos químicos e contêineres 
+
 Saída:
 
     Cc:PQ,PQ
@@ -45,17 +56,11 @@ Saída:
 Onde:
 
 **PQ:** Produto químico  
-**Cp:** Característica do produto químico    
-**E:** Especificação de armazenamento   
 **Cc:** Característica dos contêineres disponíveis     
 **(,) virgula:** Separação entre produtos químicos em um contêiner    
-**(:) dois pontos:**      
-     Separação entre produtos químicos e suas características e especificações  
-     Separação entre contêiner e os produtos químicos que armazena    
-**----- (5 traços):** Separação entre produtos químicos e contêineres 
+**(:) dois pontos:** Separação entre contêiner e os produtos químicos que armazena  
 
 Na entrada, cada linha representa um produto, antes dos cinco traços, e um contêiner, depois do cinco traços. Na saída, cada linha representa um contêiner e os produtos que estão armazenados nele.
-
 
 ## Exemplo
 
