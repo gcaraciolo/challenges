@@ -22,7 +22,7 @@ A regra de restrição de armazenamento com outros produtos é composta do sufix
 
 ## Entra e saída de dados do programa
 
-O caminho do arquivo contendo os dados de entrada será passado para o programa atráves da entrada padrão. A resultado deverá ser escrito na saída padrão.
+O caminho do arquivo contendo os dados de entrada será passado para o programa atráves da entrada padrão. O resultado deverá ser escrito na saída padrão.
 
 A entrada e saída de dados são representados da seguinte maneira:
 
