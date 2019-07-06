@@ -12,13 +12,13 @@ Para cada produto químico será especificado sua característica e qual tipo de
 | Produto químico     | Característica | Especificação de armazenamento |
 | ------------------- | -------------- | ------------------------------ |
 | TNT                 | EXPLOSIVO      | BLINDADO                       |
-| Areia               | INERTE         | QUALQUER_UM                    |
-| Amostrar biológicas | VOLÁTEL        | NÃO_COM_EXPLOSIVO              |
-| Amônia              | VOLÁTEL        | VENTILADO                      |
+| AREIA               | INERTE         | QUALQUER_UM                    |
+| AMOSTRA_BIOLOGICA   | VOLATEL        | NAO_COM_EXPLOSIVO              |
+| AMONIA              | VOLATEL        | VENTILADO                      |
 
-Existem apenas três tipos de contêineres: **BLINDADO**, **VENTILADO** e **BÁSICO**. 
+Existem apenas três tipos de contêineres: **BLINDADO**, **VENTILADO** e **BASICO**. 
 
-A regra de restrição de armazenamento com outros produtos é composta do sufixo **NÃO_COM_** e a caraterística do produto a qual não pode ser armazenado em conjunto. Exemplo: **NÃO_COM_VOLÁTEL**.
+A regra de restrição de armazenamento com outros produtos é composta do sufixo **NAO_COM_** e a caraterística do produto a qual não pode ser armazenado em conjunto. Exemplo: **NAO_COM_VOLATEL**.
 
 Produtos que tiverem a especificação **QUALQUER_UM** podem ser armazenados em quaisquer contêineres.
 
@@ -73,11 +73,11 @@ Entrada:
     TATP:EXPLOSIVO+BLINDADO
     AREIA:INERTE+QUALQUER_UM
     ALUMÍNIO:INERTE+NÃO_COM_EXPLOSIVO
-    AMÔNIA:VOLÁTEL+VENTILADO
+    AMONIA:VOLATEL+VENTILADO
     AMOSTRA_BIOLÓGICA:VOLÁTEL+NÃO_COM_EXPLOSIVO
-    ETANAL:VOLÁTEL+VENTILADO
-    FORMOL:VOLÁTEL+QUALQUER_UM
-    ANESTÉSICO:INERTE+NÃO_COM_EXPLOSIVO
+    ETANAL:VOLATEL+VENTILADO
+    FORMOL:VOLATEL+QUALQUER_UM
+    ANESTESICO:INERTE+NÃO_COM_EXPLOSIVO
     -----
     BLINDADO
     VENTILADO
