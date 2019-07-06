@@ -54,7 +54,7 @@ Onde:
      Separação entre contêiner e os produtos químicos que armazena    
 **----- (5 traços):** Separação entre produtos químicos e contêineres 
 
-Na entrada, cada linha representa um produto, antes dos asteriscos, e um contêiner, depois do asterisco. Na saída, cada linha representa um contêiner e os produtos que estão armazenados nele.
+Na entrada, cada linha representa um produto, antes dos cinco traços, e um contêiner, depois do asterisco. Na saída, cada linha representa um contêiner e os produtos que estão armazenados nele.
 
 
 ## Exemplo
