@@ -29,14 +29,28 @@ const products = parseProducts(productData);
 const containers = parseContainers(containerData);
 
 const explosivos = products.filter(product => product.characteristic === 'EXPLOSIVO');
+const volateis = products.filter(product => product.characteristic === 'VOLATEL');
 
 const blindados = containers.filter(container => container.name === 'BLINDADO');
+const ventilados = containers.filter(container => container.name === 'VENTILADO');
+const basicos = containers.filter(container => container.name === 'BASICO');
 
-explosivos.forEach(explosivo => {
-    for(let i = 0; i < blindados.length; i++) {
-        if (blindados[i].store(explosivo)) break;
-    }
-});
+armazernarProdutosEmContainers(volateis, ventilados);
+armazernarProdutosEmContainers(explosivos, blindados);
 
-console.table(explosivos);
-console.table(blindados);
+function armazernarProdutosEmContainers(products , containers) {
+    products.forEach(product => {
+        for(let i = 0; i < containers.length; i++) {
+            if (containers[i].store(product)) break;
+        }
+    });
+}
+
+[...blindados, ...basicos, ...ventilados].forEach(c => {
+    console.log(c.name)
+    c.products.forEach(p => {
+        console.log(p.name);
+    })
+
+    console.log('*******')
+})

@@ -14,6 +14,10 @@ class Container {
     isFull() {
         return this.products.length === 5;
     }
+
+    hasStored(product) {
+        return this.products.includes(product);
+    }
 }
 
 module.exports = Container;
