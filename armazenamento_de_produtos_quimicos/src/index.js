@@ -1,13 +1,6 @@
-
-/**
- * Imports
- */
-const { parseContainers, parseProducts } = require('./parser');
-
-/**
- * Function
- */ 
 const fs = require('fs');
+
+const { parseContainers, parseProducts } = require('./parser');
 
 const getFileContent = () => fs.readFileSync(process.argv[2], 'utf8');
 
@@ -37,6 +30,7 @@ const basicos = containers.filter(container => container.name === 'BASICO');
 
 armazernarProdutosEmContainers(volateis, ventilados);
 armazernarProdutosEmContainers(explosivos, blindados);
+armazernarProdutosEmContainers(getLeftOvers(getStored()), containers);
 
 function armazernarProdutosEmContainers(products , containers) {
     products.forEach(product => {
@@ -46,11 +40,35 @@ function armazernarProdutosEmContainers(products , containers) {
     });
 }
 
-[...blindados, ...basicos, ...ventilados].forEach(c => {
-    console.log(c.name)
-    c.products.forEach(p => {
-        console.log(p.name);
-    })
+function logResult() {
+    console.table(getStored());
+    console.table(getLeftOvers(getStored()));
 
-    console.log('*******')
-})
+    console.log('**************');
+
+    [...blindados, ...basicos, ...ventilados].forEach(c => {
+        console.log(c.name)
+        c.products.forEach(p => {
+            console.log(p.name);
+        })
+    
+        console.log('------')
+    })
+}
+
+function getStored() {
+    const stored = [];
+    [...blindados, ...basicos, ...ventilados].forEach(c => {
+        c.products.forEach(p => {
+            stored.push(p);
+        })
+    });
+
+    return stored;
+}
+
+function getLeftOvers(stored) {
+    return products.filter(p => !stored.map(s => s.name).includes(p.name));
+}
+
+logResult();
