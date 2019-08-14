@@ -6,9 +6,15 @@ class Container {
 
     store(product) {
         if (this.isFull()) return false;
-        
+        if (this.hasRestriction(product.containerType)) return false;
         this.products.push(product);
         return true;
+    }
+
+    hasRestriction(containerType) {
+        return this.products.filter(product => {
+            return containerType.includes(product.characteristic);
+        }).length > 0;
     }
 
     isFull() {

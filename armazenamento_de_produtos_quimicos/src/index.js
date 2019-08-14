@@ -21,8 +21,8 @@ const containerData = getInputContainers(inputData);
 const products = parseProducts(productData);
 const containers = parseContainers(containerData);
 
-const explosivos = products.filter(product => product.characteristic === 'EXPLOSIVO');
-const volateis = products.filter(product => product.characteristic === 'VOLATEL');
+const explosivos = products.filter(product => product.characteristic === 'EXPLOSIVO' && product.containerType === 'BLINDADO');
+const volateis = products.filter(product => product.characteristic === 'VOLATEL' && product.containerType === 'VENTILADO');
 
 const blindados = containers.filter(container => container.name === 'BLINDADO');
 const ventilados = containers.filter(container => container.name === 'VENTILADO');
