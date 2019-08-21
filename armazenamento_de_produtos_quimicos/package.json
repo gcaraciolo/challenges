@@ -4,7 +4,11 @@
   "description": "Um depósito armazena vários produtos químicos em pilhas formadas por grandes contêineres. Alguns produtos químicos são inertes e podem ser armazenados em praticamente qualquer lugar. Alguns são voláteis e devem ser armazenados em contêineres com ventilação especial. Alguns são explosivos e devem ser armazenados em contêineres com blindagem especial. Existem também regras sobre as combinações de produtos químicos permitidas dentro de um contêiner.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index",
+    "test": "npm run test:acceptamce",
+    "test:acceptamce": "NODE_ENV=test mocha test/acceptance",
+    "test:unit": "NODE_ENV=test mocha test/unit",
+    "test:tdd": "NODE_ENV=test mocha test/unit -w --reporter=progress"
   },
   "author": "",
   "license": "ISC",
