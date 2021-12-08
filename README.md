@@ -36,5 +36,5 @@ Otherwise, when a membership has limited resource access, the `membership_availa
 to the resources it has access.
 
 Challenge:
-Theres in [test method](https://github.com/gcaraciolo/challenges/blob/master/tests/Feature/ExampleTest.php#L26) that is marked as incomplete. It shows that it´s not possible to make an eagger loading
+There's a [test method](https://github.com/gcaraciolo/challenges/blob/master/tests/Feature/ExampleTest.php#L26) that is marked as incomplete. It shows that it´s not possible to make an eagger loading
 with the current resource relationship defined in the membership model. My problem is make eager loading working.
